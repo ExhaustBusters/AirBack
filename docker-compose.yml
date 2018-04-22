@@ -3,4 +3,4 @@ services:
   airback:
     build: ./
     ports:
-      - "3000:43000"
+      - "43000:3000"
