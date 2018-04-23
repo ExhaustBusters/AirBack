@@ -1,0 +1,19 @@
+@startuml bet_oracle
+actor User
+actor Government
+package "Car" {
+    card AirBack_App
+    card Sensor
+}
+file Smart_Contract
+cloud MachineLearning
+cloud CityData
+
+User <-- AirBack_App : feedback
+AirBack_App <-- MachineLearning
+MachineLearning <-- Smart_Contract
+Smart_Contract --> Government
+Government --> User : taxes back
+Sensor --> Smart_Contract
+CityData --> MachineLearning : weather,\n traffic lights,\n pollution
+@enduml
