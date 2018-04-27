@@ -10,10 +10,10 @@ cloud MachineLearning
 cloud CityData
 
 User <-- AirBack_App : feedback
-AirBack_App <-- MachineLearning
-MachineLearning <-- Smart_Contract
-Smart_Contract --> Government
+AirBack_App <-- MachineLearning : upcoming pollution
+MachineLearning <-- Smart_Contract : pollution
+Smart_Contract --> Government : pollution
 Government --> User : taxes back
-Sensor --> Smart_Contract
+Sensor --> Smart_Contract : pollution
 CityData --> MachineLearning : weather,\n traffic lights,\n pollution
 @enduml
